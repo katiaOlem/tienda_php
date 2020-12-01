@@ -66,12 +66,12 @@
             <div class="col-md-5">
             <select class="form-control" id="producto" name="producto" required >
             <option value="395">ID 895516 Jeans Ciclon $395 </option>
-             <?php
+           <?php
             $db = new SQLite3('tienda.db');
 
             $results = $db->query('SELECT * FROM productos');
             while ($row = $results->fetchArray()) {
-            echo $row ["producto"]."<br />";
+            echo $row ["productos"]."<br />";
 }
 ?>
             
@@ -84,6 +84,7 @@
             <div class="col-md-3">
               <input type="number" id="cantidad" name="cantidad" min="1" max="10" class="form-control" required>
               <small id="matriculaayuda" class="text-primary">máx 10 productos</small>
+              
             </div>
           </div>
           
@@ -139,7 +140,11 @@
         </div>
         
 
+
         </form>
+          <div class="col-md-5" class="container-fluid">
+        <a href="historial-ventas.php">Historial </a>
+        </div>
 </center>
 </center>
  </center>

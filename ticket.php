@@ -59,15 +59,7 @@
                   case "395":
                     echo "ID 895516 Jeans Ciclon $395";
                     break;
-                  case "295":
-                    echo "ID 960737 Blusa Zara $295 ";
-                    break;
-                  case "425":
-                    echo "ID 960738 Chamarra Been $425";
-                    break;
-                  case "999":
-                    echo "ID 879794 Playera Nike $999";
-                    break;
+                  
                   case "550":
                     echo "ID 895492 Jeans Fergino $550";
                     break;
