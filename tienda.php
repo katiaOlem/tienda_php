@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE HTML>
 <html lang=es>
 <head>
@@ -63,16 +65,17 @@
 						<label for="producto" class="col-form-label col-md-6 h1">Selecciona tu Producto </label>
             <div class="col-md-5">
             <select class="form-control" id="producto" name="producto" required >
-            <option value="0" selected>ID & MARCA</option>
             <option value="395">ID 895516 Jeans Ciclon $395 </option>
-            <option value="295">ID 960737 Blusa Zara $295 </option>
-            <option value="425">ID 960738 Chamarra Been $425 </option>
-            <option value="999">ID 879794 Playera Nike $999 </option>
-            <option value="550">ID 895492 Jeans Fergino $550 </option>
-            <option value="1000">ID 892803 Blusa Puma $1000 </option>
-            <option value="950">ID 892805 Chamarra b&O $950 </option>
-            <option value="300">ID 9500057 Playera Nip $300 </option>
-          </select>
+             <?php
+            $db = new SQLite3('tienda.db');
+
+            $results = $db->query('SELECT * FROM productos');
+            while ($row = $results->fetchArray()) {
+            echo $row ["producto"]."<br />";
+}
+?>
+            
+          </select>  
           </div>
           </div>
           <center>
