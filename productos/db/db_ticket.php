@@ -1,12 +1,14 @@
 <?php
-    $db = new SQLite3("tienda.db");
+
+    $db = new SQLite3("../tienda.db");
 
     $resultado = $db->query("SELECT * from ticket;");
 
     $table = "
         <table class='table' border=3>
             <thead>
-            <tr>
+            <tr> 
+                <th>id_ticket</th>
                 <th>Fecha</th>
                 <th>Hora venta</th>
                 <th>Cantidad producto</th>
@@ -17,17 +19,18 @@
             ";
 
     print($table);
-
-    while ($row = $resultado->fetchArray()) {
-
-        $fecha = $row['fecha'];
-        $hora_venta = $row['hora_venta'];
-        $cantidad_producto = $row['cantidad_producto'];
-        $producto = $row['producto'];
-        $total_producto = $row['total_producto'];
+    
+    while ($fila = $resultado->fetchArray()) {
+        $id_ticket = $file['id_ticket'];
+        $fecha = $file['fecha'];
+        $hora_venta = $file['hora_venta'];
+        $cantidad_producto = $file['cantidad_producto'];
+        $producto = $file['producto'];
+        $total_producto = $file['total_producto'];
 
         $table = "
             <tr>
+                <td>$id_ticket>/td>
                 <td>$fecha</td>
                 <td>$hora_venta</td>
                 <td>$cantidad_producto</td>

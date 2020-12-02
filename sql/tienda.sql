@@ -17,9 +17,11 @@ INSERT INTO productos (producto, precio, registrados) VALUES ( " ID 9500057 Play
 
 create table ticket (
 	id_ticket integer primary key Autoincrement,
-    fecha varchar ( 15 ) NOT NULL ,
-    hora_venta varchar ( 10 ) NOT NULL ,
-    cantidad_producto integer  NOT NULL ,
-    producto varchar ( 300 ) NOT NULL ,
-    total_producto integer  NOT NULL
+    fecha date() NOT NULL ,
+    hora_venta time() NOT NULL ,
+    cantidad_producto  NOT NULL ,
+    producto varchar ( 100 ) NOT NULL ,
+    total_producto varchar (100) NOT NULL
+
+    insert into ticket (fecha, hora_venta , catidad_producto, poducto, total_producto) values (date (), time(), 2 , "ID 895492 Jeans Fergino" , 1100);
 );

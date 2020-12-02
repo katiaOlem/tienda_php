@@ -32,7 +32,6 @@
     <br>
       <ul>
       <ul>
-       <a href="ticket/historial_ventas.php">Tickets</a>
         </ul>
       </ul>
       <p>
@@ -48,7 +47,6 @@
      src="https://i.ytimg.com/vi/eIkS8hXfvik/maxresdefault.jpg" align="center" width="25%">
      <img
      src="https://i.ytimg.com/vi/y5gW6EEiPy4/maxresdefault.jpg" align="center" width="25%">
-
 
     </p>
     </center>

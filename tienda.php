@@ -1,7 +1,5 @@
-
-
-<!DOCTYPE HTML>
-<html lang=es>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,6 +35,7 @@
      }
 
      </style>
+
      <div class="container">
 		 <div class="bg-secondary">
 			<div class="col-md-12 ">
@@ -65,15 +64,18 @@
 						<label for="producto" class="col-form-label col-md-6 h1">Selecciona tu Producto </label>
             <div class="col-md-5">
             <select class="form-control" id="producto" name="producto" required >
-            <option value="395">ID 895516 Jeans Ciclon $395 </option>
+            <option > ID & Producto </option>
            <?php
             $db = new SQLite3('tienda.db');
 
-            $results = $db->query('SELECT * FROM productos');
-            while ($row = $results->fetchArray()) {
-            echo $row ["productos"]."<br />";
-}
-?>
+            $resultado = $db->query("SELECT * FROM productos where registrados > 0;");
+
+            while ($row = $resultado->fetchArray()) {
+                ?>
+            <option value = " <?php echo $row['precio'] ?>"> <?php echo $row ['producto'] ?> </option>;
+            <?php
+             }
+            ?>
             
           </select>  
           </div>
@@ -131,23 +133,25 @@
           <div class="row form-group">
 						<label for="lol" class="col-form-label col-md-6"></label>
             <div class="col-md-5">
-          <button type="submit" class="btn btn-danger btn-lg my-1 float-right "  " id="pagos">Pagar</button>
+          <button type="submit" class="btn btn-danger btn-lg my-1 float-right" id="pagos">Pagar</button>
            <br> 
            </br> 
            <br>
             <p class="text-primary small text-right">ticket de compra</p>           
         </div>
         </div>
+        </div>
         
 
 
-        </form>
+        
           <div class="col-md-5" class="container-fluid">
         <a href="historial_ventas.php">Historial </a>
         </div>
-</center>
-</center>
- </center>
-  </center>
-  </body>
-</html>
+        
+        </div>
+        </form>
+        </div>
+       </div>
+    </body>
+  </html>

@@ -7,20 +7,16 @@
 
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <title>Borrar Producto</title>
+    
+    <title>HISTORIAL</title>
 </head>
 
 <body>
     <div class="container-fluid">
-        <h3 class="text-center text-dark mt-2 pt-2">Borrar Producto:</h3>  <br>
-        <a href="index.php">Volver</a>
-
-        <form action='db/db_delete.php' method='GET'> <br>
-            <?php include 'db/db_view.php'; ?>
-            <br>
-            <button type='submit' class='btn btn-outline-danger  btn-lg my-1 float-right'>Borrar</button>
-        </form>
+        <h3 class="text-center text-dark mt-3 pt-3">Productos Registrados</h3>
+        <br>
+        <?php include 'db/db_ticket.php'; ?>
+        <a href="index.php" class="btn btn-outline-secondary btn-lg my-1 float-left ">volver</a>
 
     </div>
 </body>

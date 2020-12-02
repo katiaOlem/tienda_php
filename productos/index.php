@@ -13,11 +13,12 @@
 
 <body>
     <div class="container-fluid">
-        <h3 class="text-center text-danger mt-3 pt-3">Productos Registrados</h3>
+        <h3 class="text-center text-dark mt-3 pt-3">Productos Registrados</h3>
         <br>
         <?php include 'db/db_list.php'; ?>
         <br>
         <a href="insert.php" class="btn btn-outline-secondary btn-lg my-1 float-left ">Producto Nuevo</a>
+        <a href="historial_ventas.php" class="btn btn-outline-secondary btn-lg my-1 float-right ">Historial</a>
 
     </div>
 </body>
