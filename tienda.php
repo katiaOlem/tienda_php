@@ -143,7 +143,7 @@
 
         </form>
           <div class="col-md-5" class="container-fluid">
-        <a href="historial-ventas.php">Historial </a>
+        <a href="historial_ventas.php">Historial </a>
         </div>
 </center>
 </center>

@@ -32,6 +32,7 @@
     <br>
       <ul>
       <ul>
+       <a href="ticket/historial_ventas.php">Tickets</a>
         </ul>
       </ul>
       <p>
